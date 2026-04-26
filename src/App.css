@@ -1,0 +1,62 @@
+.glitch {
+  position: relative;
+  color: white;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.glitch::before {
+  color: #ff3b00;
+  z-index: -1;
+  animation: glitch-1 0.8s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  color: #00eaff;
+  z-index: -2;
+  animation: glitch-2 0.8s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-1 {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(3px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-2 {
+  0% { transform: translate(0); }
+  20% { transform: translate(3px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-3px, -1px); }
+  80% { transform: translate(-1px, 1px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-skew {
+  0% { transform: skew(0deg); }
+  50% { transform: skew(1deg); }
+  100% { transform: skew(0deg); }
+}
+
+/* 🔥 Hover glitch (solo cuando pasas el mouse) */
+.glitch-hover:hover {
+  animation: glitch-skew 0.5s infinite linear;
+}
+
+/* 🔥 Glow brutal */
+.glow {
+  text-shadow:
+    0 0 5px #ff3b00,
+    0 0 10px #ff3b00,
+    0 0 20px #ff3b00;
+}
