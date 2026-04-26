@@ -4,6 +4,7 @@ import logo from "./assets/logo.png";
 import banda from "./assets/banda.jpg";
 import merch1 from "./assets/merch1.jpg";
 import merch2 from "./assets/merch2.jpg";
+import merch3 from "./assets/merch3.jpg";
 
 export default function App() {
   const telefono = "573184025747";
@@ -17,7 +18,7 @@ export default function App() {
   const productos = [
     { nombre: "Camiseta Carnal Blasphemy", precio: "$60.000", imagen: merch1 },
     { nombre: "Hoodie Ritual", precio: "$130.000", imagen: merch2 },
-    { nombre: "Poster Edición Limitada", precio: "$30.000", imagen: merch1 },
+    { nombre: "Embodied Corruption", precio: "$30.000", imagen: merch3 },
   ];
 
   const comprar = (producto) => {
