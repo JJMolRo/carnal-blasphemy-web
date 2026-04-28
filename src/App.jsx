@@ -26,36 +26,32 @@ export default function App() {
   };
 
   return (
-    <div className="site">
-      <div className="particles"></div>
-
-      <header className="navbar">
-  <div className="nav-container">
-    <img src={logo} alt="Carnal Blasphemy" className="logo" />
+  <div className="site">
+    <div className="particles"></div>
 
     <header className="navbar">
-  <div className="nav-container">
-    <a href="#inicio" className="logo-link">
-      <img src={logo} alt="Carnal Blasphemy" className="logo" />
-    </a>
+      <div className="nav-container">
+        <a href="#inicio" className="logo-link">
+          <img src={logo} alt="Carnal Blasphemy" className="logo" />
+        </a>
 
-    <nav className="nav-menu">
-      <a href="#inicio">Inicio</a>
-      <a href="#musica">Música</a>
-      <a href="#discografia">Discografía</a>
-      <a href="#miembros">Miembros</a>
-      <a href="#resenas">Reseñas</a>
-      <a href="#merch">Merch</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
+        <nav className="nav-menu">
+          <a href="#inicio">Inicio</a>
+          <a href="#musica">Música</a>
+          <a href="#discografia">Discografía</a>
+          <a href="#miembros">Miembros</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#merch">Merch</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
 
-      <section
-        id="inicio"
-        className="hero"
-        style={{ backgroundImage: `url(${banda})` }}
-      >
+    <section
+      id="inicio"
+      className="hero"
+      style={{ backgroundImage: `url(${banda})` }}
+    >
         <div className="heroOverlay"></div>
 
         <div className="heroContent">
