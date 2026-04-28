@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import logo from "./assets/logo.png";
 import banda from "./assets/banda.jpg";
@@ -8,7 +7,6 @@ import merch3 from "./assets/merch3.jpg";
 
 export default function App() {
   const telefono = "573184025747";
-  const [hovered, setHovered] = useState(null);
 
   const canciones = [
     "59UKUqTLSUgi6RpI4vB3JV",
@@ -18,7 +16,7 @@ export default function App() {
   const productos = [
     { nombre: "Camiseta Carnal Blasphemy", precio: "$60.000", imagen: merch1 },
     { nombre: "Hoodie Ritual", precio: "$130.000", imagen: merch2 },
-    { nombre: "Embodied Corruption", precio: "$30.000", imagen: merch3 },
+    { nombre: "Poster Edición Limitada", precio: "$30.000", imagen: merch3 },
   ];
 
   const comprar = (producto) => {
@@ -28,263 +26,182 @@ export default function App() {
   };
 
   return (
-    <div style={styles.body}>
-      <header style={styles.nav}>
-        <img src={logo} style={styles.logo} alt="Carnal Blasphemy" />
+    <div className="site">
+      <div className="particles"></div>
+
+      <header className="navbar">
+        <img src={logo} alt="Carnal Blasphemy" className="logo" />
 
         <nav>
-          {["Música", "Merch", "Banda", "Contacto"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              style={{
-                ...styles.link,
-                transform: hovered === item ? "scale(1.1)" : "scale(1)",
-                color: hovered === item ? "white" : "#aaa",
-              }}
-              onMouseEnter={() => setHovered(item)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              {item}
-            </a>
-          ))}
+          <a href="#inicio">Inicio</a>
+          <a href="#musica">Música</a>
+          <a href="#discografia">Discografía</a>
+          <a href="#miembros">Miembros</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#merch">Merch</a>
+          <a href="#contacto">Contacto</a>
         </nav>
       </header>
 
       <section
-        style={{
-          ...styles.hero,
-          background: `url(${banda}) center/cover`,
-        }}
+        id="inicio"
+        className="hero"
+        style={{ backgroundImage: `url(${banda})` }}
       >
-        <div style={styles.overlay}></div>
+        <div className="heroOverlay"></div>
 
-        <div style={styles.heroContent}>
-          <h1
-            className="glitch glow"
-            data-text="DEATH HEROES AND TOMBS"
-            style={styles.heroTitle}
-          >
+        <div className="heroContent">
+          <p className="eyebrow">Death Metal · Bogotá · Underground</p>
+
+          <h1 className="glitch glow" data-text="DEATH HEROES AND TOMBS">
             DEATH HEROES AND TOMBS
           </h1>
 
-          <p style={styles.heroText}>
-            EXTREME DEATH METAL.
+          <p className="heroText">
+            Sonido extremo, presencia oscura y una identidad brutal construida
+            desde la escena underground.
           </p>
+
+          <div className="heroButtons">
+            <a href="#musica" className="btnPrimary">Escuchar</a>
+            <a href="#merch" className="btnSecondary">Ver merch</a>
+          </div>
         </div>
       </section>
 
-      <section id="musica" style={styles.section}>
-        <h2 style={styles.title}>Música</h2>
+      <section id="musica" className="section">
+        <p className="sectionTag">Lanzamientos oficiales</p>
+        <h2>Música</h2>
 
-        {canciones.map((id, i) => (
-  <div
-    key={i}
-    style={{
-      transform: hovered === `song-${i}` ? "scale(1.02)" : "scale(1)",
-      transition: "0.3s"
-    }}
-    onMouseEnter={() => setHovered(`song-${i}`)}
-    onMouseLeave={() => setHovered(null)}
-  >
-    <iframe
-      src={`https://open.spotify.com/embed/track/${id}`}
-      width="100%"
-      height="152"
-      style={styles.spotify}
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-    ></iframe>
-  </div>
-))}
-      </section>
+        <p className="sectionText">
+          Escucha canciones seleccionadas de Carnal Blasphemy directamente desde Spotify.
+        </p>
 
-      <section id="merch" style={styles.sectionDark}>
-        <h2 style={styles.title}>Merch Oficial</h2>
-
-        <div style={styles.grid}>
-          {productos.map((producto, i) => (
-            <div
-              key={producto.nombre}
-              style={{
-                ...styles.card,
-                transform: hovered === i ? "scale(1.05)" : "scale(1)",
-              }}
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              <img
-                src={producto.imagen}
-                style={styles.imageReal}
-                alt={producto.nombre}
-              />
-
-              <h3>{producto.nombre}</h3>
-              <p style={{ color: "#888" }}>{producto.precio}</p>
-
-              <button
-                style={styles.button}
-                onClick={() => comprar(producto.nombre)}
-              >
-                Comprar
-              </button>
-            </div>
+        <div className="musicGrid">
+          {canciones.map((id) => (
+            <iframe
+              key={id}
+              src={`https://open.spotify.com/embed/track/${id}`}
+              width="100%"
+              height="152"
+              className="spotify"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
           ))}
         </div>
       </section>
 
-      <section id="banda" style={styles.section}>
-        <h2 style={styles.title}>La Banda</h2>
-        <p style={styles.text}>
-                    CARNAL BLASPHEMY, banda bogotana de metal extremo con casi de 20 años de trayectoria. 
-                    Mezcla death metal, grindcore y groove con crítica social y fuerza escénica.
-        </p>
+      <section id="discografia" className="section dark">
+        <p className="sectionTag">Catálogo oficial</p>
+        <h2>Discografía</h2>
+
+        <div className="productGrid">
+          <article className="productCard">
+            <img src={merch3} alt="Pain Industry" />
+            <div className="productInfo">
+              <h3>Pain Industry</h3>
+              <p>Álbum / EP oficial de Carnal Blasphemy.</p>
+            </div>
+          </article>
+
+          <article className="productCard">
+            <img src={banda} alt="Devoured Souls" />
+            <div className="productInfo">
+              <h3>Devoured Souls</h3>
+              <p>Material destacado disponible en Spotify.</p>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section id="contacto" style={styles.sectionDark}>
-        <h2 style={styles.title}>Booking</h2>
+      <section id="miembros" className="section">
+        <p className="sectionTag">Alineación</p>
+        <h2>Miembros</h2>
 
-        <button style={styles.ctaPrimary} onClick={() => comprar("Booking")}>
-          Contactar
+        <div className="productGrid">
+          <article className="productCard">
+            <div className="productInfo">
+              <h3>Vocalista</h3>
+              <p>Voz principal, presencia escénica y fuerza lírica.</p>
+            </div>
+          </article>
+
+          <article className="productCard">
+            <div className="productInfo">
+              <h3>Guitarra</h3>
+              <p>Riffs, composición y sonido extremo.</p>
+            </div>
+          </article>
+
+          <article className="productCard">
+            <div className="productInfo">
+              <h3>Batería</h3>
+              <p>Blast beats, groove y potencia rítmica.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="resenas" className="section dark">
+        <p className="sectionTag">Prensa y opinión</p>
+        <h2>Reseñas</h2>
+
+        <div className="productGrid">
+          <article className="productCard">
+            <div className="productInfo">
+              <h3>Reseña underground</h3>
+              <p>“Una propuesta brutal, directa y con una identidad oscura bien marcada.”</p>
+            </div>
+          </article>
+
+          <article className="productCard">
+            <div className="productInfo">
+              <h3>Crítica de escena</h3>
+              <p>“Carnal Blasphemy mantiene viva la crudeza del metal extremo colombiano.”</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="merch" className="section dark">
+        <p className="sectionTag">Tienda oficial</p>
+        <h2>Merch Oficial</h2>
+
+        <div className="productGrid">
+          {productos.map((producto) => (
+            <article className="productCard" key={producto.nombre}>
+              <img src={producto.imagen} alt={producto.nombre} />
+
+              <div className="productInfo">
+                <h3>{producto.nombre}</h3>
+                <p>{producto.precio}</p>
+
+                <button onClick={() => comprar(producto.nombre)}>
+                  Comprar por WhatsApp
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="contacto" className="section dark contact">
+        <p className="sectionTag">Booking / prensa / eventos</p>
+        <h2>Contacto</h2>
+
+        <p className="sectionText">
+          Para conciertos, colaboraciones, entrevistas o pedidos de merch.
+        </p>
+
+        <button className="btnPrimary" onClick={() => comprar("Booking")}>
+          Contactar por WhatsApp
         </button>
       </section>
 
-      <footer style={styles.footer}>
-        © 2026 Carnal Blasphemy — Death Metal
+      <footer className="footer">
+        © 2026 Carnal Blasphemy — Death Metal Underground
       </footer>
     </div>
   );
 }
-
-const styles = {
-  body: {
-    background: "#050505",
-    color: "white",
-    fontFamily: "Arial",
-  },
-
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "20px",
-    borderBottom: "1px solid #111",
-  },
-
-  logo: {
-    height: "50px",
-    filter: "drop-shadow(0px 0px 8px orange)",
-  },
-
-  link: {
-    margin: "10px",
-    textDecoration: "none",
-    transition: "0.3s",
-    display: "inline-block",
-  },
-
-  hero: {
-    position: "relative",
-    height: "80vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  overlay: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    background: "rgba(0,0,0,0.75)",
-  },
-
-  heroContent: {
-    position: "relative",
-    textAlign: "center",
-    padding: "20px",
-  },
-
-  heroTitle: {
-    fontSize: "60px",
-    letterSpacing: "6px",
-  },
-
-  heroText: {
-    color: "#aaa",
-  },
-
-  section: {
-    padding: "60px 40px",
-  },
-
-  sectionDark: {
-    padding: "60px 40px",
-    background: "#0a0a0a",
-  },
-
-  title: {
-    fontSize: "28px",
-    borderBottom: "1px solid #222",
-    paddingBottom: "10px",
-  },
-
- spotify: {
-  marginTop: "20px",
-  borderRadius: "10px",
-  border: "1px solid #222",
-  transition: "0.3s",
-  boxShadow: "0px 0px 20px rgba(255,60,0,0.15)"
-},
-
-  grid: {
-    display: "flex",
-    gap: "20px",
-    flexWrap: "wrap",
-    marginTop: "20px",
-  },
-
-  card: {
-    border: "1px solid #222",
-    padding: "20px",
-    width: "250px",
-    background: "#080808",
-    transition: "0.3s",
-  },
-
-  imageReal: {
-    width: "100%",
-    height: "150px",
-    objectFit: "cover",
-  },
-
-  button: {
-    marginTop: "10px",
-    background: "white",
-    color: "black",
-    border: "none",
-    padding: "10px",
-    cursor: "pointer",
-  },
-
-  text: {
-    marginTop: "20px",
-    color: "#aaa",
-    lineHeight: "1.7",
-    maxWidth: "800px",
-  },
-
-  ctaPrimary: {
-    padding: "12px 25px",
-    background: "white",
-    color: "black",
-    border: "none",
-    cursor: "pointer",
-  },
-
-  footer: {
-    textAlign: "center",
-    padding: "20px",
-    borderTop: "1px solid #111",
-    color: "#666",
-  },
-};
