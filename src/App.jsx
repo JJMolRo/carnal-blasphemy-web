@@ -30,18 +30,26 @@ export default function App() {
       <div className="particles"></div>
 
       <header className="navbar">
-        <img src={logo} alt="Carnal Blasphemy" className="logo" />
+  <div className="nav-container">
+    <img src={logo} alt="Carnal Blasphemy" className="logo" />
 
-        <nav>
-          <a href="#inicio">Inicio</a>
-          <a href="#musica">Música</a>
-          <a href="#discografia">Discografía</a>
-          <a href="#miembros">Miembros</a>
-          <a href="#resenas">Reseñas</a>
-          <a href="#merch">Merch</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </header>
+    <header className="navbar">
+  <div className="nav-container">
+    <a href="#inicio" className="logo-link">
+      <img src={logo} alt="Carnal Blasphemy" className="logo" />
+    </a>
+
+    <nav className="nav-menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#musica">Música</a>
+      <a href="#discografia">Discografía</a>
+      <a href="#miembros">Miembros</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#merch">Merch</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
       <section
         id="inicio"
