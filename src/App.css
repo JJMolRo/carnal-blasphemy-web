@@ -425,50 +425,34 @@ img {
   }
 
 .heroSlogan {
-  max-width: 800px;
-  margin: 10px auto;
+  max-width: 900px;
+  margin: 20px auto;
 
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  text-align: center;
 
-  text-transform: uppercase;
+  font-size: clamp(22px, 3vw, 48px);
   font-weight: 800;
-  letter-spacing: 2px;
-  line-height: 1.1;
-
-  color: rgba(255, 255, 255, 0.76);
-  text-shadow: 0 0 6px rgba(255, 60, 0, 0.45);
-
-  animation: sloganFadeIn 1.4s ease-out forwards;
-}
-
-.heroSlogan {
-  max-width: 800px;
-  margin: 10px auto;
-
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-
-  font-size: clamp(22px, 3vw, 42px);
-  line-height: 1.1;
-  letter-spacing: 2px;
-  font-weight: 800;
+  letter-spacing: 3px;
   text-transform: uppercase;
 
-  color: rgba(255, 255, 255, 0.45); /* 🔥 MENOS OPACIDAD */
+  color: rgba(255, 255, 255, 0.5); /* 🔥 TRANSPARENCIA */
 
-  mix-blend-mode: screen; /* 🔥 INTEGRACIÓN CON FONDO */
+  mix-blend-mode: screen; /* 🔥 SE FUNDE CON EL FONDO */
 
   text-shadow:
-    0 0 4px rgba(255, 60, 0, 0.3); /* 🔥 MUY SUAVE */
+    0 0 6px rgba(255, 60, 0, 0.35);
 
-  animation: sloganFadeIn 1.4s ease-out forwards;
+  animation: sloganFadeIn 1.2s ease-out forwards;
 }
 
-.heroSlogan {
-  backdrop-filter: blur(1px);
+.heroSlogan span {
+  display: inline-block;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: sloganLineIn 1s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
 .smoke {
