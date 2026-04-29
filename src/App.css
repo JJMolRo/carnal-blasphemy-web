@@ -529,5 +529,10 @@ img {
   z-index: 3;
 }
 
+.pageSection {
+  min-height: 80vh;
+  padding-top: 140px;
+}
+
 
 }
