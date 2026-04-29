@@ -6,6 +6,10 @@ import banda from "./assets/banda.jpg";
 import merch1 from "./assets/merch1.jpg";
 import merch2 from "./assets/merch2.jpg";
 import merch3 from "./assets/merch3.jpg";
+import PerversityBloodPleasure from "./assets/PerversityBloodPleasure.jpg";
+import PossessionHateAndDestruction from "./assets/PossessionHateAndDestruction.jpg";
+import LiarsMadeAuthority from "./assets/LiarsMadeAuthority.jpg";
+import DeathHeroesAndTombs from "./assets/DeathHeroesAndTombs.jpg";
 
 export default function App() {
   const telefono = "573184025747";
@@ -125,28 +129,46 @@ function Musica({ canciones }) {
   );
 }
 
-function Discografia({ banda, merch3 }) {
+function Discografia() {
+  const discos = [
+    {
+      nombre: "Perversity Blood Pleasure",
+      imagen: PerversityBloodPleasure,
+      descripcion: "EP brutal con sonido oscuro y agresivo.",
+    },
+    {
+      nombre: "Possession Hate And Destruction",
+      imagen: PossessionHateAndDestruction,
+      descripcion: "Material underground con identidad cruda.",
+    },
+    {
+      nombre: "Liars Made Authority",
+      imagen: LiarsMadeAuthority,
+      descripcion: "Producción más pesada y atmosférica.",
+    },
+    {
+      nombre: "Death Heroes And Tombs",
+      imagen: DeathHeroesAndTombs,
+      descripcion: "Material underground con identidad cruda.",
+    },
+  ];
+
   return (
     <section className="section dark pageSection">
       <p className="sectionTag">Catálogo oficial</p>
       <h2>Discografía</h2>
 
       <div className="productGrid">
-        <article className="productCard">
-          <img src={merch3} alt="Pain Industry" />
-          <div className="productInfo">
-            <h3>Pain Industry</h3>
-            <p>Álbum / EP oficial de Carnal Blasphemy.</p>
-          </div>
-        </article>
+        {discos.map((disco) => (
+          <article className="productCard" key={disco.nombre}>
+            <img src={disco.imagen} alt={disco.nombre} />
 
-        <article className="productCard">
-          <img src={banda} alt="Devoured Souls" />
-          <div className="productInfo">
-            <h3>Devoured Souls</h3>
-            <p>Material destacado disponible en Spotify.</p>
-          </div>
-        </article>
+            <div className="productInfo">
+              <h3>{disco.nombre}</h3>
+              <p>{disco.descripcion}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
