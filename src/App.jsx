@@ -198,6 +198,13 @@ function Miembros() {
         <article className="productCard">
           <div className="productInfo">
             <h3>Batería</h3>
+            <p>Riffs, composición y sonido extremo.</p>
+          </div>
+        </article>
+
+        <article className="productCard">
+          <div className="productInfo">
+            <h3>Visual</h3>
             <p>Blast beats, groove y potencia rítmica.</p>
           </div>
         </article>
