@@ -57,8 +57,10 @@ export default function App() {
         <div className="heroContent">
           <p className="eyebrow">Death Metal · Bogotá · Underground</p>
 
-          <h1 className="glitch glow" data-text="DEATH HEROES AND TOMBS">
-            DEATH HEROES AND TOMBS
+          <h1 className="heroSlogan">
+          <span>STAMPED IN BLOOD.</span>
+          <span>SCARRED IN STONE.</span>
+          <span>NO ONE LIVES WHO LEAVES NO TRACE.</span>
           </h1>
 
           <p className="heroText">
