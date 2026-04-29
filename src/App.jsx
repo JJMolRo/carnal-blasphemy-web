@@ -2,7 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 import logo from "./assets/logo.png";
-import banda from "./assets/banda.jpg";
+import banda from "./assets/banda.png";
 import merch1 from "./assets/merch1.jpg";
 import merch2 from "./assets/merch2.jpg";
 import merch3 from "./assets/merch3.jpg";
