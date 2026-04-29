@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./App.css";
 import logo from "./assets/logo.png";
 import banda from "./assets/banda.jpg";
@@ -68,7 +68,9 @@ export default function App() {
       <header className="navbar">
         <div className="nav-container">
           <a href="#inicio" className="logo-link" onClick={() => setTabActiva("inicio")}>
+          <Link to="/" className="logo-link">
             <img src={logo} alt="Carnal Blasphemy" className="logo" />
+          </Link>
           </a>
 
           <nav className="nav-menu">
