@@ -86,10 +86,10 @@ function Inicio({ banda }) {
         <p className="eyebrow">Death Metal · Bogotá · Underground</p>
 
         <h1 className="heroSlogan">
-        <span>NO ONE LIVES</span>
-          <span>WHO LEAVES</span>
-            <span>NO TRACE</span>
-        </h1>
+  <span>NO ONE LIVES</span>
+  <span>WHO LEAVES</span>
+  <span>NO TRACE</span>
+</h1>
 
         <p className="heroText">
           Sonido extremo, presencia oscura y una identidad brutal construida
@@ -165,7 +165,7 @@ function Discografia() {
       nombre: "Split with Tomorrow's Victim",
       imagen: TVCB,
       descripcion: "Colaboración con banda underground.",
-      url: "https://open.spotify.com/track/0sWZi414IOXpqeG0iQJCp8",
+      url: "https://open.spotify.com/intl-es/track/1L8cquGpVbhk2zUzfkTtIQ?si=b8d24d1abfbc4369",
     },
   ];
 
@@ -174,14 +174,14 @@ function Discografia() {
       nombre: "Into Deepest Of Human Depravity Vol.1",
       imagen: vol1,
       descripcion: "Participación en proyecto Colombian Death Metal Org.",
-      url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
+      url: "https://open.spotify.com/intl-es/track/0EMS5mDDl2LcpnlmYnLWg4?si=27fc75ed417c4cd2",
     },
 
     {
       nombre: "Into Deepest Of Human Depravity Vol.2",
       imagen: vol2,
       descripcion: "Participación en proyecto Colombian Death Metal Org.",
-      url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
+      url: "https://open.spotify.com/intl-es/track/0sWZi414IOXpqeG0iQJCp8?si=ae910eb4cd7b46e7",
     },
   ];
 

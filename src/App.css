@@ -426,52 +426,61 @@ img {
   }
 
 .heroSlogan {
-  max-width: 760px;
-  margin: 12px auto 22px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-
+  max-width: 900px;
+  margin: 20px auto;
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: 5px;
-
-  color: rgba(255, 255, 255, 0.58);
-  mix-blend-mode: screen;
-
-  text-shadow:
-    0 0 6px rgba(255, 255, 255, 0.22),
-    0 0 12px rgba(255, 60, 0, 0.22);
-
-  animation: sloganFadeIn 1.2s ease-out forwards;
+  line-height: 1.08;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .heroSlogan span {
   display: block;
+  margin-bottom: 12px;
   opacity: 0;
-  transform: translateY(18px);
-  animation: sloganLineIn 0.9s ease-out forwards;
+  transform: translateY(25px) scale(0.96);
+  animation: sloganReveal 0.9s ease-out forwards;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.25),
+    0 0 18px rgba(255, 60, 0, 0.25);
 }
 
 .heroSlogan span:nth-child(1) {
-  font-size: clamp(42px, 6vw, 88px);
-  animation-delay: 0.15s;
+  font-size: clamp(42px, 6vw, 92px);
+  animation-delay: 0.2s;
 }
 
 .heroSlogan span:nth-child(2) {
-  font-size: clamp(38px, 5.4vw, 78px);
-  color: rgba(255, 255, 255, 0.48);
-  animation-delay: 0.35s;
+  font-size: clamp(36px, 5vw, 78px);
+  animation-delay: 0.45s;
 }
 
 .heroSlogan span:nth-child(3) {
-  font-size: clamp(44px, 6.4vw, 92px);
-  color: rgba(255, 90, 0, 0.5);
-  animation-delay: 0.55s;
+  font-size: clamp(40px, 5.6vw, 86px);
+  color: rgba(255, 90, 0, 0.72);
+  animation-delay: 0.7s;
+}
+
+@keyframes sloganReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+    filter: blur(6px);
+  }
+
+  60% {
+    opacity: 0.9;
+    transform: translateY(-3px) scale(1.01);
+    filter: blur(1px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }
 
 .smoke {
