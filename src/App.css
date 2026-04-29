@@ -94,8 +94,7 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.68)),
-    radial-gradient(circle, transparent, #000 88%);
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
 }
 
 .heroContent {
@@ -425,33 +424,67 @@ img {
     letter-spacing: 2px;
   }
 
-  .heroSlogan {
-  max-width: 950px;
-  margin: 18px auto;
+.heroSlogan {
+  max-width: 800px;
+  margin: 10px auto;
+
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 
-  font-size: clamp(30px, 5vw, 64px);
-  line-height: 0.95;
-  letter-spacing: 4px;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.1;
 
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow:
-    0 0 10px rgba(255, 60, 0, 0.9),
-    0 0 24px rgba(255, 60, 0, 0.45);
+  color: rgba(255, 255, 255, 0.76);
+  text-shadow: 0 0 6px rgba(255, 60, 0, 0.45);
+
+  animation: sloganFadeIn 1.4s ease-out forwards;
+}
+
+.heroSlogan span {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: sloganLineIn 0.9s ease-out forwards;
+}
+
+.heroSlogan span:nth-child(1) {
+  font-size: clamp(22px, 3vw, 44px);
+  animation-delay: 0.2s;
 }
 
 .heroSlogan span:nth-child(2) {
-  color: rgba(255, 90, 0, 0.92);
+  font-size: clamp(20px, 2.8vw, 40px);
+  color: rgba(255, 80, 0, 0.82);
+  animation-delay: 0.45s;
 }
 
 .heroSlogan span:nth-child(3) {
-  font-size: clamp(20px, 3vw, 42px);
-  letter-spacing: 3px;
-  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(14px, 2vw, 24px);
+  color: rgba(255, 255, 255, 0.62);
+  letter-spacing: 1px;
+  animation-delay: 0.7s;
+}
+
+@keyframes sloganFadeIn {
+  from {
+    filter: blur(6px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes sloganLineIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
