@@ -178,7 +178,7 @@ function Discografia() {
     },
 
     {
-      nombre: "Into Deepest Of Human Depravity Vol.1",
+      nombre: "Into Deepest Of Human Depravity Vol.2",
       imagen: vol2,
       descripcion: "Participación en proyecto Colombian Death Metal Org.",
       url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
@@ -217,10 +217,6 @@ function Discografia() {
       {/* SPLITS */}
       <h3 className="subSection">Splits</h3>
       <div className="productGrid">{renderDiscos(splits)}</div>
-
-      {/* COLABORACIONES */}
-      <h3 className="subSection">Colaboraciones</h3>
-      <div className="productGrid">{renderDiscos(colaboraciones)}</div>
 
       {/* COLABORACIONES */}
       <h3 className="subSection">Colaboraciones</h3>
