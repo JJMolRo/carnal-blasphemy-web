@@ -109,3 +109,43 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.nav-tab {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-tab:hover,
+.nav-tab.active {
+  color: #ff5a00;
+  text-shadow: 0 0 10px #ff3b00;
+}
+
+.tabPanel {
+  position: relative;
+  z-index: 3;
+  padding: 70px 7%;
+  background: #090909;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  text-align: center;
+}
+
+.tabPanel h2 {
+  font-size: clamp(32px, 5vw, 56px);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.tabPanel p {
+  color: #aaa;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
