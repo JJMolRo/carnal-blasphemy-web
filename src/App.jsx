@@ -28,6 +28,7 @@ export default function App() {
   return (
   <div className="site">
     <div className="particles"></div>
+    <div className="smoke"></div>
 
     <header className="navbar">
       <div className="nav-container">

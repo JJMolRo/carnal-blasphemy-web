@@ -443,48 +443,87 @@ img {
   animation: sloganFadeIn 1.4s ease-out forwards;
 }
 
-.heroSlogan span {
-  opacity: 0;
-  transform: translateY(18px);
-  animation: sloganLineIn 0.9s ease-out forwards;
+.heroSlogan {
+  max-width: 800px;
+  margin: 10px auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  font-size: clamp(22px, 3vw, 42px);
+  line-height: 1.1;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.45); /* 🔥 MENOS OPACIDAD */
+
+  mix-blend-mode: screen; /* 🔥 INTEGRACIÓN CON FONDO */
+
+  text-shadow:
+    0 0 4px rgba(255, 60, 0, 0.3); /* 🔥 MUY SUAVE */
+
+  animation: sloganFadeIn 1.4s ease-out forwards;
 }
 
-.heroSlogan span:nth-child(1) {
-  font-size: clamp(22px, 3vw, 44px);
-  animation-delay: 0.2s;
+.heroSlogan {
+  backdrop-filter: blur(1px);
 }
 
-.heroSlogan span:nth-child(2) {
-  font-size: clamp(20px, 2.8vw, 40px);
-  color: rgba(255, 80, 0, 0.82);
-  animation-delay: 0.45s;
+.smoke {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.28;
 }
 
-.heroSlogan span:nth-child(3) {
-  font-size: clamp(14px, 2vw, 24px);
-  color: rgba(255, 255, 255, 0.62);
-  letter-spacing: 1px;
-  animation-delay: 0.7s;
+.smoke::before,
+.smoke::after {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  left: -30%;
+  top: -30%;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.12), transparent 18%),
+    radial-gradient(circle at 60% 40%, rgba(255, 90, 0, 0.09), transparent 22%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.08), transparent 20%),
+    radial-gradient(circle at 40% 80%, rgba(255, 90, 0, 0.07), transparent 26%);
+
+  filter: blur(35px);
+  animation: smokeMove 28s linear infinite;
 }
 
-@keyframes sloganFadeIn {
-  from {
-    filter: blur(6px);
+.smoke::after {
+  opacity: 0.6;
+  filter: blur(55px);
+  animation-duration: 42s;
+  animation-direction: reverse;
+}
+
+@keyframes smokeMove {
+  0% {
+    transform: translate3d(-3%, 2%, 0) rotate(0deg) scale(1);
   }
-  to {
-    filter: blur(0);
+  50% {
+    transform: translate3d(4%, -3%, 0) rotate(8deg) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-3%, 2%, 0) rotate(0deg) scale(1);
   }
 }
 
-@keyframes sloganLineIn {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.navbar,
+.heroContent,
+.section,
+.footer {
+  position: relative;
+  z-index: 3;
 }
 
 
