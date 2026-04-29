@@ -59,10 +59,10 @@ export default function App() {
           <p className="eyebrow">Death Metal · Bogotá · Underground</p>
 
           <h1 className="heroSlogan">
-          <span>STAMPED IN BLOOD.</span>
-          <span>SCARRED IN STONE.</span>
-          <span>NO ONE LIVES WHO LEAVES NO TRACE.</span>
+          <span>NO ONE LIVES WHO LEAVES NO TRACE</span>
           </h1>
+          
+      
 
           <p className="heroText">
             Sonido extremo, presencia oscura y una identidad brutal construida
