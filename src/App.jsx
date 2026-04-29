@@ -59,7 +59,9 @@ export default function App() {
           <p className="eyebrow">Death Metal · Bogotá · Underground</p>
 
           <h1 className="heroSlogan">
-          <span>NO ONE LIVES WHO LEAVES NO TRACE</span>
+          <span>NO ONE LIVES</span>
+          <span>WHO LEAVES</span>
+          <span>NO TRACE</span>
           </h1>
           
       

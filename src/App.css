@@ -94,7 +94,8 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.56)),
+    radial-gradient(circle, transparent, #000 92%);
 }
 
 .heroContent {
@@ -425,34 +426,52 @@ img {
   }
 
 .heroSlogan {
-  max-width: 900px;
-  margin: 20px auto;
+  max-width: 760px;
+  margin: 12px auto 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
 
   text-align: center;
-
-  font-size: clamp(22px, 3vw, 48px);
-  font-weight: 800;
-  letter-spacing: 3px;
   text-transform: uppercase;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 5px;
 
-  color: rgba(255, 255, 255, 0.5); /* 🔥 TRANSPARENCIA */
-
-  mix-blend-mode: screen; /* 🔥 SE FUNDE CON EL FONDO */
+  color: rgba(255, 255, 255, 0.58);
+  mix-blend-mode: screen;
 
   text-shadow:
-    0 0 6px rgba(255, 60, 0, 0.35);
+    0 0 6px rgba(255, 255, 255, 0.22),
+    0 0 12px rgba(255, 60, 0, 0.22);
 
   animation: sloganFadeIn 1.2s ease-out forwards;
 }
 
 .heroSlogan span {
-  display: inline-block;
-
+  display: block;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(18px);
+  animation: sloganLineIn 0.9s ease-out forwards;
+}
 
-  animation: sloganLineIn 1s ease-out forwards;
-  animation-delay: 0.3s;
+.heroSlogan span:nth-child(1) {
+  font-size: clamp(42px, 6vw, 88px);
+  animation-delay: 0.15s;
+}
+
+.heroSlogan span:nth-child(2) {
+  font-size: clamp(38px, 5.4vw, 78px);
+  color: rgba(255, 255, 255, 0.48);
+  animation-delay: 0.35s;
+}
+
+.heroSlogan span:nth-child(3) {
+  font-size: clamp(44px, 6.4vw, 92px);
+  color: rgba(255, 90, 0, 0.5);
+  animation-delay: 0.55s;
 }
 
 .smoke {
