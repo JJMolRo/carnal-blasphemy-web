@@ -83,9 +83,9 @@ function Inicio({ banda }) {
         <p className="eyebrow">Death Metal · Bogotá · Underground</p>
 
         <h1 className="heroSlogan">
-          <span>NO ONE LIVES</span>
+        <span>NO ONE LIVES</span>
           <span>WHO LEAVES</span>
-          <span>NO TRACE</span>
+            <span>NO TRACE</span>
         </h1>
 
         <p className="heroText">
