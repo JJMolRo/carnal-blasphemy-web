@@ -138,25 +138,25 @@ function Discografia() {
       nombre: "Perversity Blood Pleasure",
       imagen: PerversityBloodPleasure,
       descripcion: "EP brutal con sonido oscuro y agresivo.",
-      url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
+      url: "https://open.spotify.com/intl-es/track/34d3Hs6vay6OYVseEEDAYm?si=bb27659b6706412f",
     },
     {
       nombre: "Possession Hate And Destruction",
       imagen: PossessionHateAndDestruction,
       descripcion: "Material underground con identidad cruda.",
-      url: "https://open.spotify.com/track/0sWZi414IOXpqeG0iQJCp8",
+      url: "https://open.spotify.com/intl-es/track/4GNyuNbSVVXm7uhaaKmqmn?si=394a25804516416d",
     },
     {
       nombre: "Liars Made Authority",
       imagen: LiarsMadeAuthority,
       descripcion: "Producción más pesada y atmosférica.",
-      url: "https://open.spotify.com/track/0sWZi414IOXpqeG0iQJCp8",
+      url: "https://open.spotify.com/intl-es/track/3UkTCt1Bn6OZAjUFnYAziM?si=99a65c96f15f4c3f",
     },
     {
       nombre: "Death Heroes And Tombs",
       imagen: DeathHeroesAndTombs,
       descripcion: "Material underground con identidad cruda.",
-      url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
+      url: "https://open.spotify.com/intl-es/track/7I47g1N4HgBaIyXn8CB3vf?si=4972a62d63a24b23",
     },
   ];
 
