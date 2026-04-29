@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import logo from "./assets/logo.png";
 import banda from "./assets/banda.jpg";
 import merch1 from "./assets/merch1.jpg";
 import merch2 from "./assets/merch2.jpg";
 import merch3 from "./assets/merch3.jpg";
+
 
 export default function App() {
   const telefono = "573184025747";
@@ -70,18 +72,16 @@ export default function App() {
           </a>
 
           <nav className="nav-menu">
-            {Object.keys(tabs).map((tab) => (
-              <button
-                key={tab}
-                className={tabActiva === tab ? "nav-tab active" : "nav-tab"}
-                onClick={() => setTabActiva(tab)}
-              >
-                {tabs[tab].titulo}
-              </button>
-            ))}
+          <Link to="/">Inicio</Link>
+          <Link to="/musica">Música</Link>
+          <Link to="/discografia">Discografía</Link>
+          <Link to="/miembros">Miembros</Link>
+          <Link to="/resenas">Reseñas</Link>
+          <Link to="/merch">Merch</Link>
+          <Link to="/contacto">Contacto</Link>
           </nav>
-        </div>
-      </header>
+          </div>
+          </header>
 
       <section
         id="inicio"
