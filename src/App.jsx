@@ -10,6 +10,9 @@ import PerversityBloodPleasure from "./assets/PerversityBloodPleasure.jpg";
 import PossessionHateAndDestruction from "./assets/PossessionHateAndDestruction.jpg";
 import LiarsMadeAuthority from "./assets/LiarsMadeAuthority.jpg";
 import DeathHeroesAndTombs from "./assets/DeathHeroesAndTombs.jpg";
+import TVCB from "./assets/TVCB.jpg";
+import vol1 from "./assets/vol1.jpg";
+import vol2 from "./assets/vol2.jpg";
 
 export default function App() {
   const telefono = "573184025747";
@@ -130,48 +133,102 @@ function Musica({ canciones }) {
 }
 
 function Discografia() {
-  const discos = [
+  const albumes = [
     {
       nombre: "Perversity Blood Pleasure",
       imagen: PerversityBloodPleasure,
       descripcion: "EP brutal con sonido oscuro y agresivo.",
+      url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
     },
     {
       nombre: "Possession Hate And Destruction",
       imagen: PossessionHateAndDestruction,
       descripcion: "Material underground con identidad cruda.",
+      url: "https://open.spotify.com/track/0sWZi414IOXpqeG0iQJCp8",
     },
     {
       nombre: "Liars Made Authority",
       imagen: LiarsMadeAuthority,
       descripcion: "Producción más pesada y atmosférica.",
+      url: "https://open.spotify.com/track/0sWZi414IOXpqeG0iQJCp8",
     },
     {
       nombre: "Death Heroes And Tombs",
       imagen: DeathHeroesAndTombs,
       descripcion: "Material underground con identidad cruda.",
+      url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
     },
   ];
+
+  const splits = [
+    {
+      nombre: "Split with Tomorrow's Victim",
+      imagen: TVCB,
+      descripcion: "Colaboración con banda underground.",
+      url: "https://open.spotify.com/track/0sWZi414IOXpqeG0iQJCp8",
+    },
+  ];
+
+  const colaboraciones = [
+    {
+      nombre: "Into Deepest Of Human Depravity Vol.1",
+      imagen: vol1,
+      descripcion: "Participación en proyecto Colombian Death Metal Org.",
+      url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
+    },
+
+    {
+      nombre: "Into Deepest Of Human Depravity Vol.1",
+      imagen: vol2,
+      descripcion: "Participación en proyecto Colombian Death Metal Org.",
+      url: "https://open.spotify.com/track/59UKUqTLSUgi6RpI4vB3JV",
+    },
+  ];
+
+  const renderDiscos = (lista) =>
+    lista.map((disco) => (
+      <a
+        key={disco.nombre}
+        href={disco.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="discLink"
+      >
+        <article className="productCard">
+          <img src={disco.imagen} alt={disco.nombre} />
+
+          <div className="productInfo">
+            <h3>{disco.nombre}</h3>
+            <p>{disco.descripcion}</p>
+          </div>
+        </article>
+      </a>
+    ));
 
   return (
     <section className="section dark pageSection">
       <p className="sectionTag">Catálogo oficial</p>
       <h2>Discografía</h2>
 
-      <div className="productGrid">
-        {discos.map((disco) => (
-          <article className="productCard" key={disco.nombre}>
-            <img src={disco.imagen} alt={disco.nombre} />
+      {/* ÁLBUMES */}
+      <h3 className="subSection">Álbumes / EP</h3>
+      <div className="productGrid">{renderDiscos(albumes)}</div>
 
-            <div className="productInfo">
-              <h3>{disco.nombre}</h3>
-              <p>{disco.descripcion}</p>
-            </div>
-          </article>
-        ))}
-      </div>
+      {/* SPLITS */}
+      <h3 className="subSection">Splits</h3>
+      <div className="productGrid">{renderDiscos(splits)}</div>
+
+      {/* COLABORACIONES */}
+      <h3 className="subSection">Colaboraciones</h3>
+      <div className="productGrid">{renderDiscos(colaboraciones)}</div>
+
+      {/* COLABORACIONES */}
+      <h3 className="subSection">Colaboraciones</h3>
+      <div className="productGrid">{renderDiscos(colaboraciones)}</div>
     </section>
   );
+
+  
 }
 
 function Miembros() {

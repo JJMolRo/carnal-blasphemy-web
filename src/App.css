@@ -546,5 +546,20 @@ img {
   filter: brightness(1.2);
 }
 
+.subSection {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff5a00;
+}
+
+.discLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 
 }
