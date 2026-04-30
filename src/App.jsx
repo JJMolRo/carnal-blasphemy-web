@@ -86,10 +86,10 @@ function Inicio({ banda }) {
         <p className="eyebrow">Death Metal · Bogotá · Underground</p>
 
         <h1 className="heroSlogan">
-  <span>NO ONE LIVES</span>
-  <span>WHO LEAVES</span>
-  <span>NO TRACE</span>
-</h1>
+        <span>NO ONE LIVES</span>
+        <span>WHO LEAVES</span>
+        <span>NO TRACE</span>
+        </h1>
 
         <p className="heroText">
           Sonido extremo, presencia oscura y una identidad brutal construida
