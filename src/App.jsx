@@ -6,6 +6,7 @@ import banda from "./assets/banda.png";
 import merch1 from "./assets/merch1.jpg";
 import merch2 from "./assets/merch2.jpg";
 import merch3 from "./assets/merch3.jpg";
+import GM from "./assets/GM.png";
 import PerversityBloodPleasure from "./assets/PerversityBloodPleasure.jpg";
 import PossessionHateAndDestruction from "./assets/PossessionHateAndDestruction.jpg";
 import LiarsMadeAuthority from "./assets/LiarsMadeAuthority.jpg";
@@ -228,39 +229,45 @@ function Discografia() {
 }
 
 function Miembros() {
+  const miembros = [
+    {
+      nombre: "Vocalista",
+      imagen: GM,
+      descripcion: "Voz principal, presencia escénica y brutalidad lírica.",
+    },
+    {
+      nombre: "Guitarra",
+      imagen: GM,
+      descripcion: "Riffs, composición y sonido extremo.",
+    },
+    {
+      nombre: "Batería",
+      imagen: GM,
+      descripcion: "Blast beats, precisión y violencia rítmica.",
+    },
+    {
+      nombre: "Visual",
+      imagen: GM,
+      descripcion: "Identidad visual, estética y concepto.",
+    },
+  ];
+
   return (
     <section className="section pageSection">
       <p className="sectionTag">Alineación</p>
       <h2>Miembros</h2>
 
       <div className="productGrid">
-        <article className="productCard">
-          <div className="productInfo">
-            <h3>Vocalista</h3>
-            <p>Voz principal, presencia escénica y fuerza lírica.</p>
-          </div>
-        </article>
+        {miembros.map((m) => (
+          <article className="productCard" key={m.nombre}>
+            <img src={m.imagen} alt={m.nombre} className="memberImg" />
 
-        <article className="productCard">
-          <div className="productInfo">
-            <h3>Guitarra</h3>
-            <p>Riffs, composición y sonido extremo.</p>
-          </div>
-        </article>
-
-        <article className="productCard">
-          <div className="productInfo">
-            <h3>Batería</h3>
-            <p>Riffs, composición y sonido extremo.</p>
-          </div>
-        </article>
-
-        <article className="productCard">
-          <div className="productInfo">
-            <h3>Visual</h3>
-            <p>Blast beats, groove y potencia rítmica.</p>
-          </div>
-        </article>
+            <div className="productInfo">
+              <h3>{m.nombre}</h3>
+              <p>{m.descripcion}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
